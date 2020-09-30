@@ -5,11 +5,11 @@ services:
     image: mysql:5.7
     environment: 
       MYSQL_DATABASE: bookstore_db
-      MYSQL_ROOT_PASSWORD: P123456p
-      MYSQL_USER: clarusway
-      MYSQL_PASSWORD: Clarusway_1
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_USER: ummuhan
+      MYSQL_PASSWORD: ummuhan_1
     networks:
-      - clarusnet
+      - aysuvil
   my-app:
     image: callahanclarus/bookstore-api:latest
     restart: always
@@ -18,7 +18,7 @@ services:
     ports:
       - "80:80"
     networks:
-      - clarusnet
+      - aysuvil
 networks:
-  clarusnet:
+  aysuvil:
     driver: bridge
