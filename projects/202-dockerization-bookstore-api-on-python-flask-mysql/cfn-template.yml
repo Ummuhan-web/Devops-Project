@@ -52,7 +52,7 @@ Resources:
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/Dockerfile" -L "$FOLDER"Dockerfile
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/docker-compose.yml" -L "$FOLDER"docker-compose.yml
           cd /home/ec2-user/bookstore-api
-          docker build -t callahanclarus/bookstore-api:latest .
+          docker build -t ummuhany/bookstore-api:latest .
           docker-compose up -d
 
 Outputs:

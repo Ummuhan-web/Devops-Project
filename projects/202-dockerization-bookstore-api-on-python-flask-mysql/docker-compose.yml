@@ -11,7 +11,7 @@ services:
     networks:
       - aysuvil
   my-app:
-    image: callahanclarus/bookstore-api:latest
+    image: ummuhany/bookstore-api:latest
     restart: always
     depends_on:
       - database
