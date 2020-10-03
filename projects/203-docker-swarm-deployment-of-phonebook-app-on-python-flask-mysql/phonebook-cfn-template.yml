@@ -82,7 +82,7 @@ Resources:
     Type: "AWS::EC2::LaunchTemplate"
     Properties:
       LaunchTemplateData:
-        ImageId: ami-0c94855ba95c71c99
+        ImageId: ami-0947d2ba12ee1ff75
         InstanceType: t2.micro
         KeyName: !Ref KeyPairName
         SecurityGroupIds:
@@ -115,7 +115,7 @@ Resources:
     Type: "AWS::EC2::LaunchTemplate"
     Properties:
       LaunchTemplateData:
-        ImageId: ami-0c94855ba95c71c99
+        ImageId: ami-0947d2ba12ee1ff75
         InstanceType: t2.micro
         KeyName: !Ref KeyPairName
         SecurityGroupIds:
@@ -148,7 +148,7 @@ Resources:
     Type: "AWS::EC2::Instance"
     Properties:
       IamInstanceProfile: !Ref EC2ConnectProfile 
-      ImageId: ami-0c94855ba95c71c99 
+      ImageId: ami-0947d2ba12ee1ff75
       InstanceType: t2.micro
       KeyName: !Ref KeyPairName
       SecurityGroupIds:
@@ -206,7 +206,7 @@ Resources:
               docker-compose config | docker stack deploy --with-registry-auth -c - phonebook
             - ECR_REGISTRY: !Sub ${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com
               APP_REPO_NAME: clarusway-repo/phonebook-app
-              GITHUB_REPO: https://github.com/callahan-cw/project-203.git
+              GITHUB_REPO: https://github.com/Ummuhan-web/203DevopsProject.git
               GIT_FILE_URL: https://raw.githubusercontent.com/callahan-cw/project-203/master/
 
   DockerManager2:
@@ -292,3 +292,8 @@ Outputs:
     Value: !Sub 
       - ${PublicAddress}
       - PublicAddress: !GetAtt DockerWorker2.PublicDnsName
+
+
+
+
+
